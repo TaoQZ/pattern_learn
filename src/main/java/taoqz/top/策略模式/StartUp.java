@@ -14,7 +14,7 @@ public class StartUp {
         User user = new User();
         user.setAge(18);
 
-        GradingStrategy strategy = GradingStrategyContext.getStrategy(user.getAge());
+        GradingStrategy strategy = GradingStrategyFactory.getStrategy(user.getAge());
         List<String> recommendedVideos = strategy.getRecommendedVideos(user);
 
         System.out.println("user: " + user.getTag());

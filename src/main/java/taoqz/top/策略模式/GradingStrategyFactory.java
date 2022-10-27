@@ -8,7 +8,7 @@ import java.util.Map;
  *
  * @Author taoqingzhou
  **/
-public class GradingStrategyContext {
+public class GradingStrategyFactory {
 
     private static final Map<String, GradingStrategy> map = new HashMap<>();
 
