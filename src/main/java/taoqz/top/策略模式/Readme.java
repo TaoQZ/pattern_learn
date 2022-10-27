@@ -3,7 +3,7 @@ package taoqz.top.策略模式;
 /**
  * @Author taoqingzhou
  **/
-public class Note {
+public class Readme {
 
     /**
      *  策略模式：策略模式（Strategy Pattern）：定义一族算法类，将每个算法分别封装起来，让它们可以互相替换。
