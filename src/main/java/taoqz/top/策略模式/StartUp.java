@@ -15,10 +15,13 @@ public class StartUp {
         user.setAge(18);
 
         GradingStrategy strategy = GradingStrategyFactory.getStrategy(user.getAge());
-        List<String> recommendedVideos = strategy.getRecommendedVideos(user);
+
+        GradingStrategyContext gradingStrategyContext = new GradingStrategyContext();
+        gradingStrategyContext.setGradingStrategy(strategy);
+        List<String> execute = gradingStrategyContext.execute(user);
 
         System.out.println("user: " + user.getTag());
-        System.out.println("recommendedVideos: " + recommendedVideos);
+        System.out.println("recommendedVideos: " + execute);
 
         // user: 青年
         // recommendedVideos: [亲情, 友情, 爱情, 血腥, 暴力, 色情]
