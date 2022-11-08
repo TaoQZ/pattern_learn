@@ -99,4 +99,27 @@ public class PopulationRegist {
 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getIdCardNo() {
+        return idCardNo;
+    }
+
+    public String getAccountBookNo() {
+        return accountBookNo;
+    }
+
+    public String getBirthCertificate() {
+        return birthCertificate;
+    }
 }
