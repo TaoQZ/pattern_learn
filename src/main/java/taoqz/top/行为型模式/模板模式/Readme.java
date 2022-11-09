@@ -27,6 +27,24 @@ public class Readme {
      * 注意事项:
      *      为防止恶意操作,一半模板方法都加上final关键词
      *
+     * Java中应用的例子: AbstractList类 的 addAll(int index, Collection<? extends E> c) | add(int index, E element)
+     *
+     *     public boolean addAll(int index, Collection<? extends E> c) {
+     *         rangeCheckForAdd(index);
+     *         boolean modified = false;
+     *         for (E e : c) {
+     *             add(index++, e);
+     *             modified = true;
+     *         }
+     *         return modified;
+     *     }
+     *
+     *    public void add(int index, E element) {
+     *         throw new UnsupportedOperationException();
+     *     }
+     *
+     *   其中addAll()可以看作模板方法,addAll()引用了add方法,但是add方法没有被实现,无法使用,需要子类进行具体的实现
+     *
      * 需求:
      *      一个人的一天,吃饭睡觉打豆豆,但每个人的吃饭吃得东西不同,睡觉姿势不同,打豆豆的方式不一样,但是一个人的一天都是这么过得.
      *
