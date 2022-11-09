@@ -7,9 +7,9 @@ package taoqz.top.行为型模式.模板模式;
  **/
 public abstract class PersonsDay {
 
-    abstract void eat();
-    abstract void sleep();
-    abstract void dadoudou();
+    protected abstract void eat();
+    protected abstract void sleep();
+    protected abstract void dadoudou();
 
 
     /**
