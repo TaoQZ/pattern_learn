@@ -36,11 +36,19 @@ public class MyCallBack {
 
         }
 
-        return this.execute(new Method1Callback());
+//        return this.execute(new Method1Callback());
+
+        // 匿名内部类,和上面的方式等价
+        return this.execute(new CallBack() {
+            @Override
+            public String doMethod() {
+                return param1.toUpperCase();
+            }
+        });
     }
 
     public static void main(String[] args) {
-        System.out.println(new MyCallBack().method1("OK"));
+        System.out.println(new MyCallBack().method1("ok"));
         System.out.println(new MyCallBack().method1("OK1"));
     }
 
